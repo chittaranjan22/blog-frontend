@@ -26,8 +26,8 @@ export class PostapiService {
   getAllCommentsURL="http://localhost:8080/api/blog/comments";
   getCommentsByUserIdURL="http://localhost:8080/api/blog/comment/user/";
   deleteCommentByCommentIdURL="http://localhost:8080/api/blog/comment/";
-
-
+  getCommentByCommentIdURL="http://localhost:8080/api/blog/getcomment/";
+  updateCommentURL="http://localhost:8080/api/blog/comment/";
   getAllPosts():Observable<any>
   {
    return this.http.get(this.allPostURL);
@@ -122,6 +122,18 @@ export class PostapiService {
   deleteCommentByCommentId(commentId:any):Observable<any>
   {
     return this.http.delete(this.deleteCommentByCommentIdURL+commentId);
+  }
+
+  getCommentBycommentId(commentId:any):Observable<any>
+  {
+    return this.http.get(this.getCommentByCommentIdURL+commentId);
+  }
+
+  updateComment(comment:any):Observable<any>
+  {
+    const headers={'content-type':'application/json'};
+    const body=JSON.stringify(comment);
+    return this.http.put(this.updateCommentURL,body,{'headers':headers});
   }
 
 }
