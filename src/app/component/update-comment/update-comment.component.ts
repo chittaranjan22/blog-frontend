@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Comment } from '../model/Comment';
-import { PostapiService } from '../service/postapi.service';
+import { Comment } from '../../model/Comment';
+import { PostapiService } from '../../service/postapi.service';
 
 @Component({
   selector: 'app-update-comment',
@@ -24,12 +24,22 @@ export class UpdateCommentComponent {
   updateComment(commentId:any,content:any)
   {
     this.comment=new Comment(commentId,content);
-    //this.service.updateComment(this.comment).subscribe(
-    //  response =>{console.log(response);}
-    //);
+    this.service.updateComment(this.comment).subscribe(
+     response =>{console.log(response);
+      alert('comment updated!!');
+      this.router.navigate(['manage-comments']);
+    }
+    );
 
     console.log(this.comment);
   
+  }
+
+  logout()
+  {
+    localStorage.clear();
+    this.router.navigate(['signin']);
+    
   }
 
 }

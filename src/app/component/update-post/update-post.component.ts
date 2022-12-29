@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Post } from '../model/Post';
-import { PostapiService } from '../service/postapi.service';
+import { Post } from '../../model/Post';
+import { PostapiService } from '../../service/postapi.service';
 
 @Component({
   selector: 'app-update-post',
@@ -40,6 +40,13 @@ export class UpdatePostComponent {
     this.target = event.target as HTMLInputElement;
     this.files = this.target.files as FileList;
     //console.log(this.files);
+    
+  }
+
+  logout()
+  {
+    localStorage.clear();
+    this.router.navigate(['signin']);
     
   }
 }

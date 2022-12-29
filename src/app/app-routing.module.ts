@@ -11,8 +11,8 @@ import { PostsCategoryComponent } from './component/posts-category/posts-categor
 import { SigninComponent } from './component/signin/signin.component';
 import { SignupComponent } from './component/signup/signup.component';
 import { SinglePostComponent } from './component/single-post/single-post.component';
-import { UpdateCommentComponent } from './update-comment/update-comment.component';
-import { UpdatePostComponent } from './update-post/update-post.component';
+import { UpdateCommentComponent } from './component/update-comment/update-comment.component';
+import { UpdatePostComponent } from './component/update-post/update-post.component';
 
 const routes: Routes = [
   {

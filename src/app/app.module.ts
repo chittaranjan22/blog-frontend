@@ -17,8 +17,8 @@ import { ManagePostsComponent } from './component/manage-posts/manage-posts.comp
 import { ManageCommentsComponent } from './component/manage-comments/manage-comments.component';
 import { ManageUsersComponent } from './component/manage-users/manage-users.component';
 import { AddPostComponent } from './component/add-post/add-post.component';
-import { UpdatePostComponent } from './update-post/update-post.component';
-import { UpdateCommentComponent } from './update-comment/update-comment.component';
+import { UpdatePostComponent } from './component/update-post/update-post.component';
+import { UpdateCommentComponent } from './component/update-comment/update-comment.component';
 
 @NgModule({
   declarations: [
