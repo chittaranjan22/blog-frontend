@@ -19,6 +19,7 @@ import { ManageUsersComponent } from './component/manage-users/manage-users.comp
 import { AddPostComponent } from './component/add-post/add-post.component';
 import { UpdatePostComponent } from './component/update-post/update-post.component';
 import { UpdateCommentComponent } from './component/update-comment/update-comment.component';
+import { SearchResultComponent } from './component/search-result/search-result.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { UpdateCommentComponent } from './component/update-comment/update-commen
     ManageUsersComponent,
     AddPostComponent,
     UpdatePostComponent,
-    UpdateCommentComponent
+    UpdateCommentComponent,
+    SearchResultComponent
   ],
   imports: [
     BrowserModule,

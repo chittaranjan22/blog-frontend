@@ -8,6 +8,7 @@ import { ManagePostsComponent } from './component/manage-posts/manage-posts.comp
 import { ManageUsersComponent } from './component/manage-users/manage-users.component';
 import { PostSearchComponent } from './component/post-search/post-search.component';
 import { PostsCategoryComponent } from './component/posts-category/posts-category.component';
+import { SearchResultComponent } from './component/search-result/search-result.component';
 import { SigninComponent } from './component/signin/signin.component';
 import { SignupComponent } from './component/signup/signup.component';
 import { SinglePostComponent } from './component/single-post/single-post.component';
@@ -74,8 +75,11 @@ const routes: Routes = [
  {
   path : 'update-comment/:commentId',
   component: UpdateCommentComponent
+ },
+ {
+  path : 'search-result',
+  component: SearchResultComponent
  }
-
 ];
 
 
