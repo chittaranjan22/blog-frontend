@@ -8,29 +8,23 @@
         </h6>
         <hr class="nomargin-bottom margin-top-10">
         <!-- SEARCH RESULTS -->
-        <div class="clearfix search-result"><!-- item -->
-            <h4><a href="#">Admin – fully responsive webapp</a></h4>
-            <small class="text-success">www.stepofweb.com/</small>
-            <p>Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa.</p>
+        <div class="clearfix search-result" *ngIf="post"><!-- item -->
+            <h4><a href="/single-post/{{post.postId}}">{{post.postTitle}}</a></h4>
+            <small class="text-success">www.techblog.com</small>
+            <p><b>Author :</b> {{post.user.userName}}</p>
+            <p>{{post.postContent}}</p>
         </div><!-- /item -->
     
-       
+        <div class="clearfix search-result" *ngIf="!post"><!-- item -->
+            <h4>No post found!!</h4>
+        
+        </div><!-- /item -->
       
     
         <br><br><br><br><br><br>   
         <br>  
         <!-- PAGINATION -->
-        <div class="text-center margin-top-20">
-            <ul class="pagination">
-                <li class="disabled"><a href="#">Previous</a></li>
-                <li class="active"><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#">Next</a></li>
-            </ul>
-        </div>
+       
         <!-- /PAGINATION -->
     </div>
     </div>

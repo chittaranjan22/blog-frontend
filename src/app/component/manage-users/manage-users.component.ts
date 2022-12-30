@@ -9,6 +9,9 @@ import { PostapiService } from 'src/app/service/postapi.service';
 })
 export class ManageUsersComponent {
   users:any;
+
+  loginStatus:any=localStorage.getItem("loginStatus");
+  userRole:any=localStorage.getItem("userRole");
   constructor(private service:PostapiService,private router:Router)
   {
     this.service.getAllUsers().subscribe(

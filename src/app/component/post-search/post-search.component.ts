@@ -17,12 +17,15 @@ export class PostSearchComponent {
   }
   postSearch(title:any)
   {
-    alert();
-    this.service.getPostByTitle(title).subscribe(
-      response => {
-        console.log(response);
-        this.post=response;
-      }
+    
+    this.router.navigate(
+      ['/search-result'],
+      { queryParams: { postTitle: title } }
     );
+
+
+
+
+    
   }
 }
