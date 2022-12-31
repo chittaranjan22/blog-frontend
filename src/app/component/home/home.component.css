@@ -9,3 +9,12 @@ img, svg {
     height: 100px;
     
 }
+
+.content
+{
+    font-size: 0.7rem;
+}
+
+.h6, h6 {
+    font-size: 0.8rem;
+}

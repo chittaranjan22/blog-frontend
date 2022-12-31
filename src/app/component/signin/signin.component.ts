@@ -33,7 +33,8 @@ export class SigninComponent {
         localStorage.setItem("loginStatus","active");
         localStorage.setItem("email",email);
         localStorage.setItem("userId",response.userId);
-        localStorage.setItem("userRole",response.userRole);
+        localStorage.setItem("userId",response.userId);
+        localStorage.setItem("userName",response.userName);
         this.router.navigate(['dashboard']);
     },
 

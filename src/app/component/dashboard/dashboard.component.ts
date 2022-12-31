@@ -10,6 +10,7 @@ export class DashboardComponent {
 
   loginStatus:any=localStorage.getItem("loginStatus");
   userRole:any=localStorage.getItem("userRole");
+  userName=localStorage.getItem("userName");
 
   constructor(private router:Router)
   {

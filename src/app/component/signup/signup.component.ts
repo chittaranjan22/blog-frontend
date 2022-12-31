@@ -28,7 +28,8 @@ export class SignupComponent {
         console.log(response);
         alert('Signup successful!!');
         this.router.navigate(['/signin']);
-    }
+    },
+    (error) => { alert(error.message);  }
 
 
    );
